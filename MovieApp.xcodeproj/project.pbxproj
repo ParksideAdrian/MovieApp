@@ -15,6 +15,7 @@
 		C044210C21250DCF0057E47B /* MovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044210B21250DCF0057E47B /* MovieAppUITests.swift */; };
 		C044211C212553E30057E47B /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044211B212553E30057E47B /* NowPlayingViewController.swift */; };
 		C044211E21277B000057E47B /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044211D21277B000057E47B /* MovieCell.swift */; };
+		C0442126212B67C00057E47B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0442125212B67C00057E47B /* DetailViewController.swift */; };
 		CAF3AE371B0CC85B9DF4C80C /* Pods_MovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40ABCD984D209A64B02E6F12 /* Pods_MovieAppTests.framework */; };
 		EC0F5D7EAE4F34B9A38DF99E /* Pods_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9794916375839D5C493C6A7 /* Pods_MovieAppUITests.framework */; };
 		FE888E81050995EBDDF1CB19 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67175E3EC3B5C85ED261E5E /* Pods_MovieApp.framework */; };
@@ -58,6 +59,7 @@
 		C044210D21250DCF0057E47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C044211B212553E30057E47B /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		C044211D21277B000057E47B /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		C0442125212B67C00057E47B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C62971ABA47EA16C3EEB2511 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		D67175E3EC3B5C85ED261E5E /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3961055CB462281B73A2B5 /* Pods-MovieAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppUITests/Pods-MovieAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,13 +128,13 @@
 		C04420EA21250DCF0057E47B /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				C044211B212553E30057E47B /* NowPlayingViewController.swift */,
+				C0442120212B65530057E47B /* Views */,
+				C044211F212B65470057E47B /* ViewControllers */,
 				C04420EB21250DCF0057E47B /* AppDelegate.swift */,
 				C04420EF21250DCF0057E47B /* Main.storyboard */,
 				C04420F221250DCF0057E47B /* Assets.xcassets */,
 				C04420F421250DCF0057E47B /* LaunchScreen.storyboard */,
 				C04420F721250DCF0057E47B /* Info.plist */,
-				C044211D21277B000057E47B /* MovieCell.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -153,6 +155,23 @@
 				C044210D21250DCF0057E47B /* Info.plist */,
 			);
 			path = MovieAppUITests;
+			sourceTree = "<group>";
+		};
+		C044211F212B65470057E47B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C044211B212553E30057E47B /* NowPlayingViewController.swift */,
+				C0442125212B67C00057E47B /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0442120212B65530057E47B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C044211D21277B000057E47B /* MovieCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C1579950B2389BC601492DE2 /* Pods */ = {
@@ -386,6 +405,7 @@
 				C044211C212553E30057E47B /* NowPlayingViewController.swift in Sources */,
 				C04420EC21250DCF0057E47B /* AppDelegate.swift in Sources */,
 				C044211E21277B000057E47B /* MovieCell.swift in Sources */,
+				C0442126212B67C00057E47B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
