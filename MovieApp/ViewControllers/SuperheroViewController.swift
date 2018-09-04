@@ -18,8 +18,18 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        fetchMovies()
+        
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
+        let cellsPerLine:  CGFloat = 2
+        let interItemSpacingTotal = layout.minimumInteritemSpacing * (cellsPerLine - 1)
+        let width = collectionView.frame.size.width / cellsPerLine - interItemSpacingTotal / cellsPerLine
+        layout.itemSize = CGSize(width: width, height: width * 3/2)
+        
 
+        fetchMovies()
         // Do any additional setup after loading the view.
     }
     
@@ -31,7 +41,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
         let movie = self.movies[indexPath.item]
-        print(self.movies)
+        //print(self.movies)
         if  let posterPathString = movie["poster_path"] as? String{
             let baseURLString = "https://image.tmdb.org/t/p/w500"
             let posterURL = URL(string: baseURLString + posterPathString)!
